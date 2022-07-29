@@ -82,8 +82,8 @@ class ManActivity  : AppCompatActivity() {
 
     private fun getPermissionStateMessage(): Spanned {
         val html = if (isAndroid12()) {
-            "Bluetooth Adapter Enabled? - <b>${getHtmlTextForResult(isBtEnabled())}</b>\n" +
-            "BLUETOOTH_SCAN Granted? - <b>${getHtmlTextForResult(isBtScanGrantedPermission())}</b>\n" +
+            "Bluetooth Adapter Enabled? - <b>${getHtmlTextForResult(isBtEnabled())}</b><br>" +
+            "BLUETOOTH_SCAN Granted? - <b>${getHtmlTextForResult(isBtScanGrantedPermission())}</b><br>" +
                     "BLUETOOTH_CONNECT Granted? - <b>${getHtmlTextForResult(isBtConnectGrantedPermission())}</b>"
         } else {
             "Bluetooth check required for Android-12 and above devices only"
